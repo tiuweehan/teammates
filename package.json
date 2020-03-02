@@ -11,7 +11,9 @@
     "lint:json": "jsonlint-cli src/web/**/*.json src/main/resources/*.json src/test/resources/data/*.json",
     "lint:css": "stylelint \"src/web/**/*.scss\" --config static-analysis/teammates-stylelint.yml",
     "lint:spaces": "lintspaces -n -t -d spaces -l 1 -. \"src/main/**/*.html\" \"src/web/**/*.html\" \"src/**/*.xml\" \"src/**/*.json\" \"src/**/*.properties\" \"*.yml\" \"*.json\" \"*.gradle\" \"static-analysis/*.*ml\"",
-    "lint": "npm-run-all lint:* -c"
+    "lint": "npm-run-all lint:* -c",
+    "format:ts": "ng lint --tslint-config static-analysis/teammates-tslint.yml --fix",
+    "format": "npm-run-all format:* -c"
   },
   "private": true,
   "dependencies": {
